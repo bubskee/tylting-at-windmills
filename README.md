@@ -6,7 +6,7 @@ This site is the home for essays, experiments, and **Hill Climb Till It's Go Tim
 
 ## Development
 
-Requires Node.js 22.22.0 or later (see .node-version).
+Requires Node.js 22.23.4 or later (see .node-version).
 
 ```sh
 npm install
