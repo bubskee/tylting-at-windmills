@@ -170,12 +170,17 @@ projects = (dist / "windmills/projects/index.html").read_text(encoding="utf-8")
 assert 'id="current-projects"' in projects, "Missing current projects section"
 assert 'id="published-tools"' in projects, "Missing published tools section"
 for url in (
+    "/interp/",
+    "/interp/#zoo",
     "https://github.com/bubskee/stars-elegy",
     "https://github.com/bubskee/euphoria-axis",
     "https://huggingface.co/bubskee/qwen3-14b-jr-lenses",
     "https://github.com/bubskee/euphoria-axis/blob/main/releases/qwen3-14b-jr-lenses/README.md",
 ):
     assert f'href="{url}"' in projects, f"Missing project link: {url}"
+interp = (dist / "interp/index.html").read_text(encoding="utf-8")
+assert 'id="zoo"' in interp and 'href="leg-day.html"' in interp, "Missing illustrated zoo entrance"
+assert (dist / "interp/leg-day.html").is_file(), "Missing opening exhibit"
 assert "Projects coming soon." not in projects, "Stale projects placeholder"
 print("Construction note and current/public projects verified.")
 

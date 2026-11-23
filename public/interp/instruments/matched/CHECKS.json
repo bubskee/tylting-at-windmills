@@ -1,0 +1,113 @@
+{
+  "legs_9b": [
+    {
+      "id": "spider-from-bee",
+      "fresh": "6",
+      "archive": "6"
+    },
+    {
+      "id": "spider-from-ant",
+      "fresh": "4",
+      "archive": "4"
+    },
+    {
+      "id": "dog-from-cat-legs",
+      "fresh": "4",
+      "archive": "4"
+    },
+    {
+      "id": "dog-from-cat-sound",
+      "fresh": "wo",
+      "archive": "wo"
+    }
+  ],
+  "pause": {
+    "awkward-pause": {
+      "exact_top1": 64,
+      "total": 64,
+      "disagreements": []
+    },
+    "awkward-pause-llama": {
+      "exact_top1": 59,
+      "total": 64,
+      "disagreements": [
+        {
+          "id": "09-an-remove",
+          "archive": " document",
+          "fresh": " old"
+        },
+        {
+          "id": "09-an-random-0",
+          "archive": " application",
+          "fresh": " old"
+        },
+        {
+          "id": "13-an-remove",
+          "archive": " bear",
+          "fresh": " video"
+        },
+        {
+          "id": "14-an-remove",
+          "archive": " $",
+          "fresh": " "
+        },
+        {
+          "id": "14-an-keep",
+          "archive": " offer",
+          "fresh": " apology"
+        }
+      ]
+    }
+  },
+  "rabbit_4b": [
+    {
+      "id": "couplet-gray-day",
+      "fresh_clean": "And cast a light upon the morning day.",
+      "fresh_edited": "The sun rose up to greet the day.",
+      "archive_clean": "And cast a light upon the morning day.",
+      "archive_edited": "The sun rose up to greet the day."
+    },
+    {
+      "id": "couplet-dead-red",
+      "fresh_clean": "But now the roses on the grave are red.",
+      "fresh_edited": "The roses on the grave had long been dead,",
+      "archive_clean": "But now the roses on the grave are red.",
+      "archive_edited": "And the green grass had turned to yellow sand."
+    }
+  ],
+  "brass_9b": [
+    {
+      "id": "keys-test-0-direct",
+      "fresh": [
+        -4.5625,
+        -4.5
+      ],
+      "archive": [
+        -4.491,
+        -4.66453
+      ]
+    },
+    {
+      "id": "keys-test-0-relay",
+      "fresh": [
+        -2.375,
+        7.125
+      ],
+      "archive": [
+        -2.42885,
+        7.1398
+      ]
+    },
+    {
+      "id": "keys-test-0-map",
+      "fresh": [
+        -11.75,
+        -11.5625
+      ],
+      "archive": [
+        -11.68637,
+        -11.52038
+      ]
+    }
+  ]
+}

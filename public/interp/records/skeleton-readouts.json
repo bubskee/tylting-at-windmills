@@ -1,0 +1,247 @@
+{
+  "readouts": [
+    {
+      "prompt": "Fact: The chemical symbol for the element with atomic number 26 is ",
+      "layer": 19,
+      "position": -1,
+      "seconds": 0.8194856189657003,
+      "branches": {
+        "logit": {
+          "ranks": {
+            "iron": 3451
+          },
+          "top10": [
+            "icode",
+            "abbrev",
+            "iteln",
+            "生",
+            "<|im_end|>",
+            "istic",
+            "otto",
+            "中",
+            "舍",
+            "<think>"
+          ]
+        },
+        "full": {
+          "ranks": {
+            "iron": 564
+          },
+          "top10": [
+            " X",
+            " A",
+            " chemical",
+            " atomic",
+            " name",
+            " number",
+            "<|endoftext|>",
+            " B",
+            " code",
+            " H"
+          ]
+        },
+        "same": {
+          "ranks": {
+            "iron": 1143
+          },
+          "top10": [
+            " X",
+            " A",
+            "2",
+            "1",
+            "<|im_end|>",
+            " B",
+            "(s",
+            " C",
+            " H",
+            "\\n"
+          ]
+        },
+        "tail": {
+          "ranks": {
+            "iron": 266
+          },
+          "top10": [
+            "<|endoftext|>",
+            " chemical",
+            "<|box_end|>",
+            " chem",
+            " atomic",
+            " Chem",
+            "—that",
+            " named",
+            " atoms",
+            " chemistry"
+          ]
+        }
+      }
+    },
+    {
+      "prompt": "Ella has the map. Nina and Tom each carry one key. Nina carries the brass",
+      "layer": 7,
+      "position": -1,
+      "seconds": 0.29276891599874943,
+      "branches": {
+        "logit": {
+          "ranks": {
+            "brass": 395,
+            "silver": 3600
+          },
+          "top10": [
+            " C",
+            " M",
+            " P",
+            "C",
+            "i",
+            " and",
+            "某",
+            "u",
+            " A",
+            " B"
+          ]
+        },
+        "full": {
+          "ranks": {
+            "brass": 2,
+            "silver": 11
+          },
+          "top10": [
+            " and",
+            " brass",
+            " of",
+            " in",
+            " metal",
+            " on",
+            " copper",
+            " for",
+            " gold",
+            "s"
+          ]
+        },
+        "same": {
+          "ranks": {
+            "brass": 1675,
+            "silver": 304
+          },
+          "top10": [
+            "s",
+            "es",
+            "y",
+            " and",
+            "ing",
+            "ity",
+            "i",
+            "ie",
+            "-like",
+            "ier"
+          ]
+        },
+        "tail": {
+          "ranks": {
+            "brass": 1,
+            "silver": 7
+          },
+          "top10": [
+            " brass",
+            " Brass",
+            " and",
+            " the",
+            " copper",
+            " in",
+            " silver",
+            " gold",
+            " metal",
+            " for"
+          ]
+        }
+      }
+    },
+    {
+      "prompt": "Ella has the map. Nina and Tom each carry one key. Nina carries the silver",
+      "layer": 7,
+      "position": -1,
+      "seconds": 0.2873292649164796,
+      "branches": {
+        "logit": {
+          "ranks": {
+            "brass": 9495,
+            "silver": 242
+          },
+          "top10": [
+            "薄",
+            "ag",
+            "-blue",
+            "ite",
+            "itter",
+            "ase",
+            "光",
+            "ola",
+            "ara",
+            "estra"
+          ]
+        },
+        "full": {
+          "ranks": {
+            "brass": 22,
+            "silver": 1
+          },
+          "top10": [
+            " silver",
+            " gold",
+            " and",
+            " Silver",
+            " to",
+            " metal",
+            " of",
+            " in",
+            " on",
+            " for"
+          ]
+        },
+        "same": {
+          "ranks": {
+            "brass": 550,
+            "silver": 764
+          },
+          "top10": [
+            "ization",
+            "ton",
+            " and",
+            "ed",
+            "ing",
+            "ized",
+            "-blue",
+            "b",
+            "s",
+            "ite"
+          ]
+        },
+        "tail": {
+          "ranks": {
+            "brass": 24,
+            "silver": 1
+          },
+          "top10": [
+            " silver",
+            " gold",
+            " Silver",
+            " the",
+            " and",
+            " in",
+            " metal",
+            " of",
+            " Gold",
+            " to"
+          ]
+        }
+      }
+    }
+  ],
+  "timing": {
+    "layer": 19,
+    "seconds_one": 0.2003744039684534,
+    "seconds_1000": 4.842058885958977,
+    "batch_size": 64,
+    "cache": "residuals from 1,000 token positions, capture and model load excluded"
+  }
+}

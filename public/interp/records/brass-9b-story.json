@@ -1,0 +1,170 @@
+{
+  "checkpoint": {
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "text_subconfig_revision": null,
+    "executed_script_sha256": "272e51c69526b0b3b7412674ced7cd2cbe7eb39de1de8db5d167eaadcee59932",
+    "gpu": "NVIDIA A40",
+    "torch": "2.8.0+cu128",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.1"
+  },
+  "case": {
+    "id": "keys-test-0",
+    "side": 0,
+    "lead": "Ella has the map. Nina and Tom each carry one key. Nina carries the",
+    "piv": [
+      "brass",
+      "silver"
+    ],
+    "qs": [
+      {
+        "k": "direct",
+        "suffix": " key. Tom carries the other key.\nQuestion: Who has the brass key?\nAnswer:",
+        "opts": [
+          "Nina",
+          "Tom"
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      {
+        "k": "fit-wording",
+        "suffix": " key. Tom carries the other key.\nQuestion: Nina gives everything to Ella. Which door can Ella unlock, brass or silver?\nAnswer:",
+        "opts": [
+          "brass",
+          "silver"
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      {
+        "k": "paraphrase",
+        "suffix": " key. Tom carries the other key.\nQuestion: Nina hands over the key to Ella. What metal is the lock that Ella can now open?\nAnswer:",
+        "opts": [
+          "brass",
+          "silver"
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      {
+        "k": "relay",
+        "suffix": " key. Tom carries the other key.\nQuestion: Nina passes the key to Ella, who hands it to Jane. Which door can Jane now open?\nAnswer:",
+        "opts": [
+          "brass",
+          "silver"
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      {
+        "k": "map",
+        "suffix": " key. Tom carries the other key.\nQuestion: Who has the map?\nAnswer:",
+        "opts": [
+          "Ella",
+          "Jane"
+        ],
+        "y": [
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "answers": [
+    {
+      "base": -4.491,
+      "donor": 4.50081,
+      "patch": -4.66453,
+      "forecast_means": -4.6463,
+      "forecast_ace": -4.60049,
+      "forecast_gradient": -4.65126,
+      "forecast_ica": -4.46412,
+      "forecast_gradica": -4.634,
+      "forecast_pca": -4.57331,
+      "edit_means": -4.64502,
+      "edit_ace": -4.55068,
+      "edit_gradient": -4.67191,
+      "edit_ica": -4.52892,
+      "edit_gradica": -4.71484,
+      "edit_pca": -4.58323
+    },
+    {
+      "base": 0.60493,
+      "donor": 1.63352,
+      "patch": 3.91008,
+      "forecast_means": 3.96271,
+      "forecast_ace": 3.88253,
+      "forecast_gradient": 1.30984,
+      "forecast_ica": 3.76409,
+      "forecast_gradica": 0.85398,
+      "forecast_pca": 4.03701,
+      "edit_means": 3.87481,
+      "edit_ace": 3.8821,
+      "edit_gradient": 3.00259,
+      "edit_ica": 3.90542,
+      "edit_gradica": 1.82037,
+      "edit_pca": 4.01157
+    },
+    {
+      "base": -1.22693,
+      "donor": 3.15836,
+      "patch": 3.25285,
+      "forecast_means": 3.2818,
+      "forecast_ace": 3.21349,
+      "forecast_gradient": -0.84267,
+      "forecast_ica": 1.91245,
+      "forecast_gradica": -1.01435,
+      "forecast_pca": 1.98308,
+      "edit_means": 3.30828,
+      "edit_ace": 3.29336,
+      "edit_gradient": 0.61206,
+      "edit_ica": 2.34898,
+      "edit_gradica": 0.04432,
+      "edit_pca": 2.15484
+    },
+    {
+      "base": -2.42885,
+      "donor": 7.41975,
+      "patch": 7.1398,
+      "forecast_means": 7.18824,
+      "forecast_ace": 7.21011,
+      "forecast_gradient": -1.44503,
+      "forecast_ica": 4.93373,
+      "forecast_gradica": -1.89663,
+      "forecast_pca": 5.62849,
+      "edit_means": 7.14977,
+      "edit_ace": 7.15359,
+      "edit_gradient": 1.97536,
+      "edit_ica": 5.77282,
+      "edit_gradica": 0.27967,
+      "edit_pca": 5.95673
+    },
+    {
+      "base": -11.68637,
+      "donor": -11.6425,
+      "patch": -11.52038,
+      "forecast_means": -11.4931,
+      "forecast_ace": -11.52263,
+      "forecast_gradient": -11.68358,
+      "forecast_ica": -11.54276,
+      "forecast_gradica": -11.71522,
+      "forecast_pca": -11.54686,
+      "edit_means": -11.48671,
+      "edit_ace": -11.47237,
+      "edit_gradient": -11.55616,
+      "edit_ica": -11.49841,
+      "edit_gradica": -11.54632,
+      "edit_pca": -11.52231
+    }
+  ]
+}

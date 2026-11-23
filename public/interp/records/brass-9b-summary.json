@@ -1,0 +1,571 @@
+{
+  "model": {
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "text_subconfig_revision": null,
+    "executed_script_sha256": "272e51c69526b0b3b7412674ced7cd2cbe7eb39de1de8db5d167eaadcee59932",
+    "gpu": "NVIDIA A40",
+    "torch": "2.8.0+cu128",
+    "transformers": "5.14.1",
+    "sklearn": "1.9.1"
+  },
+  "protocol": {
+    "model": "Qwen/Qwen3.5-9B",
+    "revision": null,
+    "layer": 7,
+    "fit": {
+      "iterations": 16,
+      "algorithm": "parallel",
+      "converged": true
+    },
+    "batch": 12,
+    "suite": "handoff",
+    "site": "binding"
+  },
+  "nine_b": {
+    "all_rows": {
+      "rows": 1000,
+      "ties": 0,
+      "both_clean_correct": 763,
+      "natural_flips": 563,
+      "patch_flips": 449,
+      "patch_equals_donor": 692,
+      "means_recovered": 448,
+      "means_false_alarms": 0,
+      "ace_recovered": 448,
+      "ace_false_alarms": 1,
+      "gradient_recovered": 21,
+      "gradient_false_alarms": 0,
+      "ica_recovered": 257,
+      "ica_false_alarms": 0,
+      "gradica_recovered": 9,
+      "gradica_false_alarms": 0,
+      "pca_recovered": 306,
+      "pca_false_alarms": 0
+    },
+    "by_question": {
+      "direct": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 200,
+        "natural_flips": 200,
+        "patch_flips": 0,
+        "patch_equals_donor": 0,
+        "means_recovered": 0,
+        "means_false_alarms": 0,
+        "ace_recovered": 0,
+        "ace_false_alarms": 0,
+        "gradient_recovered": 0,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 0,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 0,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 0,
+        "pca_false_alarms": 0
+      },
+      "fit-wording": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 5,
+        "natural_flips": 5,
+        "patch_flips": 102,
+        "patch_equals_donor": 103,
+        "means_recovered": 102,
+        "means_false_alarms": 0,
+        "ace_recovered": 102,
+        "ace_false_alarms": 0,
+        "gradient_recovered": 3,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 62,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 3,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 66,
+        "pca_false_alarms": 0
+      },
+      "paraphrase": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 158,
+        "natural_flips": 158,
+        "patch_flips": 147,
+        "patch_equals_donor": 189,
+        "means_recovered": 146,
+        "means_false_alarms": 0,
+        "ace_recovered": 146,
+        "ace_false_alarms": 1,
+        "gradient_recovered": 17,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 87,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 6,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 96,
+        "pca_false_alarms": 0
+      },
+      "relay": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 200,
+        "natural_flips": 200,
+        "patch_flips": 200,
+        "patch_equals_donor": 200,
+        "means_recovered": 200,
+        "means_false_alarms": 0,
+        "ace_recovered": 200,
+        "ace_false_alarms": 0,
+        "gradient_recovered": 1,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 108,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 0,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 144,
+        "pca_false_alarms": 0
+      },
+      "map": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 200,
+        "natural_flips": 0,
+        "patch_flips": 0,
+        "patch_equals_donor": 200,
+        "means_recovered": 0,
+        "means_false_alarms": 0,
+        "ace_recovered": 0,
+        "ace_false_alarms": 0,
+        "gradient_recovered": 0,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 0,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 0,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 0,
+        "pca_false_alarms": 0
+      }
+    }
+  },
+  "four_b": {
+    "all_rows": {
+      "rows": 1000,
+      "ties": 0,
+      "both_clean_correct": 903,
+      "natural_flips": 703,
+      "patch_flips": 556,
+      "patch_equals_donor": 781,
+      "means_recovered": 555,
+      "means_false_alarms": 1,
+      "ace_recovered": 555,
+      "ace_false_alarms": 1,
+      "gradient_recovered": 27,
+      "gradient_false_alarms": 1,
+      "ica_recovered": 533,
+      "ica_false_alarms": 1,
+      "gradica_recovered": 2,
+      "gradica_false_alarms": 1,
+      "pca_recovered": 545,
+      "pca_false_alarms": 1
+    },
+    "by_question": {
+      "direct": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 185,
+        "natural_flips": 185,
+        "patch_flips": 5,
+        "patch_equals_donor": 14,
+        "means_recovered": 4,
+        "means_false_alarms": 0,
+        "ace_recovered": 4,
+        "ace_false_alarms": 0,
+        "gradient_recovered": 0,
+        "gradient_false_alarms": 1,
+        "ica_recovered": 5,
+        "ica_false_alarms": 1,
+        "gradica_recovered": 0,
+        "gradica_false_alarms": 1,
+        "pca_recovered": 3,
+        "pca_false_alarms": 1
+      },
+      "fit-wording": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 118,
+        "natural_flips": 118,
+        "patch_flips": 151,
+        "patch_equals_donor": 167,
+        "means_recovered": 151,
+        "means_false_alarms": 1,
+        "ace_recovered": 151,
+        "ace_false_alarms": 1,
+        "gradient_recovered": 23,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 138,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 2,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 142,
+        "pca_false_alarms": 0
+      },
+      "paraphrase": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 200,
+        "natural_flips": 200,
+        "patch_flips": 200,
+        "patch_equals_donor": 200,
+        "means_recovered": 200,
+        "means_false_alarms": 0,
+        "ace_recovered": 200,
+        "ace_false_alarms": 0,
+        "gradient_recovered": 2,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 193,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 0,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 200,
+        "pca_false_alarms": 0
+      },
+      "relay": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 200,
+        "natural_flips": 200,
+        "patch_flips": 200,
+        "patch_equals_donor": 200,
+        "means_recovered": 200,
+        "means_false_alarms": 0,
+        "ace_recovered": 200,
+        "ace_false_alarms": 0,
+        "gradient_recovered": 2,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 197,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 0,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 200,
+        "pca_false_alarms": 0
+      },
+      "map": {
+        "rows": 200,
+        "ties": 0,
+        "both_clean_correct": 200,
+        "natural_flips": 0,
+        "patch_flips": 0,
+        "patch_equals_donor": 200,
+        "means_recovered": 0,
+        "means_false_alarms": 0,
+        "ace_recovered": 0,
+        "ace_false_alarms": 0,
+        "gradient_recovered": 0,
+        "gradient_false_alarms": 0,
+        "ica_recovered": 0,
+        "ica_false_alarms": 0,
+        "gradica_recovered": 0,
+        "gradica_false_alarms": 0,
+        "pca_recovered": 0,
+        "pca_false_alarms": 0
+      }
+    }
+  },
+  "first_story": {
+    "case": {
+      "id": "keys-test-0",
+      "side": 0,
+      "lead": "Ella has the map. Nina and Tom each carry one key. Nina carries the",
+      "piv": [
+        "brass",
+        "silver"
+      ],
+      "qs": [
+        {
+          "k": "direct",
+          "suffix": " key. Tom carries the other key.\nQuestion: Who has the brass key?\nAnswer:",
+          "opts": [
+            "Nina",
+            "Tom"
+          ],
+          "y": [
+            0,
+            1
+          ]
+        },
+        {
+          "k": "fit-wording",
+          "suffix": " key. Tom carries the other key.\nQuestion: Nina gives everything to Ella. Which door can Ella unlock, brass or silver?\nAnswer:",
+          "opts": [
+            "brass",
+            "silver"
+          ],
+          "y": [
+            0,
+            1
+          ]
+        },
+        {
+          "k": "paraphrase",
+          "suffix": " key. Tom carries the other key.\nQuestion: Nina hands over the key to Ella. What metal is the lock that Ella can now open?\nAnswer:",
+          "opts": [
+            "brass",
+            "silver"
+          ],
+          "y": [
+            0,
+            1
+          ]
+        },
+        {
+          "k": "relay",
+          "suffix": " key. Tom carries the other key.\nQuestion: Nina passes the key to Ella, who hands it to Jane. Which door can Jane now open?\nAnswer:",
+          "opts": [
+            "brass",
+            "silver"
+          ],
+          "y": [
+            0,
+            1
+          ]
+        },
+        {
+          "k": "map",
+          "suffix": " key. Tom carries the other key.\nQuestion: Who has the map?\nAnswer:",
+          "opts": [
+            "Ella",
+            "Jane"
+          ],
+          "y": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "four_b": [
+      {
+        "question": "direct",
+        "options": [
+          "Nina",
+          "Tom"
+        ],
+        "results": {
+          "base": {
+            "winner": "Nina",
+            "margin": -4.53436
+          },
+          "donor": {
+            "winner": "Tom",
+            "margin": 2.71259
+          },
+          "patch": {
+            "winner": "Nina",
+            "margin": -4.82926
+          }
+        }
+      },
+      {
+        "question": "fit-wording",
+        "options": [
+          "brass",
+          "silver"
+        ],
+        "results": {
+          "base": {
+            "winner": "brass",
+            "margin": -2.10244
+          },
+          "donor": {
+            "winner": "silver",
+            "margin": 1.42415
+          },
+          "patch": {
+            "winner": "silver",
+            "margin": 2.55975
+          }
+        }
+      },
+      {
+        "question": "paraphrase",
+        "options": [
+          "brass",
+          "silver"
+        ],
+        "results": {
+          "base": {
+            "winner": "brass",
+            "margin": -4.53319
+          },
+          "donor": {
+            "winner": "silver",
+            "margin": 7.24348
+          },
+          "patch": {
+            "winner": "silver",
+            "margin": 7.12744
+          }
+        }
+      },
+      {
+        "question": "relay",
+        "options": [
+          "brass",
+          "silver"
+        ],
+        "results": {
+          "base": {
+            "winner": "brass",
+            "margin": -4.06166
+          },
+          "donor": {
+            "winner": "silver",
+            "margin": 6.98822
+          },
+          "patch": {
+            "winner": "silver",
+            "margin": 6.83582
+          }
+        }
+      },
+      {
+        "question": "map",
+        "options": [
+          "Ella",
+          "Jane"
+        ],
+        "results": {
+          "base": {
+            "winner": "Ella",
+            "margin": -9.54402
+          },
+          "donor": {
+            "winner": "Ella",
+            "margin": -9.37177
+          },
+          "patch": {
+            "winner": "Ella",
+            "margin": -9.36536
+          }
+        }
+      }
+    ],
+    "nine_b": [
+      {
+        "question": "direct",
+        "options": [
+          "Nina",
+          "Tom"
+        ],
+        "results": {
+          "base": {
+            "winner": "Nina",
+            "margin": -4.491
+          },
+          "donor": {
+            "winner": "Tom",
+            "margin": 4.50081
+          },
+          "patch": {
+            "winner": "Nina",
+            "margin": -4.66453
+          }
+        }
+      },
+      {
+        "question": "fit-wording",
+        "options": [
+          "brass",
+          "silver"
+        ],
+        "results": {
+          "base": {
+            "winner": "silver",
+            "margin": 0.60493
+          },
+          "donor": {
+            "winner": "silver",
+            "margin": 1.63352
+          },
+          "patch": {
+            "winner": "silver",
+            "margin": 3.91008
+          }
+        }
+      },
+      {
+        "question": "paraphrase",
+        "options": [
+          "brass",
+          "silver"
+        ],
+        "results": {
+          "base": {
+            "winner": "brass",
+            "margin": -1.22693
+          },
+          "donor": {
+            "winner": "silver",
+            "margin": 3.15836
+          },
+          "patch": {
+            "winner": "silver",
+            "margin": 3.25285
+          }
+        }
+      },
+      {
+        "question": "relay",
+        "options": [
+          "brass",
+          "silver"
+        ],
+        "results": {
+          "base": {
+            "winner": "brass",
+            "margin": -2.42885
+          },
+          "donor": {
+            "winner": "silver",
+            "margin": 7.41975
+          },
+          "patch": {
+            "winner": "silver",
+            "margin": 7.1398
+          }
+        }
+      },
+      {
+        "question": "map",
+        "options": [
+          "Ella",
+          "Jane"
+        ],
+        "results": {
+          "base": {
+            "winner": "Ella",
+            "margin": -11.68637
+          },
+          "donor": {
+            "winner": "Ella",
+            "margin": -11.6425
+          },
+          "patch": {
+            "winner": "Ella",
+            "margin": -11.52038
+          }
+        }
+      }
+    ]
+  },
+  "peek": {
+    "meta": {
+      "iterations": 16,
+      "algorithm": "parallel",
+      "converged": true
+    },
+    "components": {
+      "ICA": 4,
+      "PCA": 3
+    }
+  }
+}
