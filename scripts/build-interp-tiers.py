@@ -428,7 +428,7 @@ def rankings(weighted):
                 if weighted or not value or g.grade=='S':
                     label=title if name==toolnames[g.tool] else title+' · '+toolnames[g.tool]
                     contributors.append(mini(g,f'tiers/{slug}.html#{g.anchor}',label))
-        coverage=f'{len(animals)} scored animal'+('' if len(animals)==1 else 's')
+        coverage=f'{len(animals)} scored exhibit'+('' if len(animals)==1 else 's')
         num=f'{float(value):.2f}' if weighted else f'{value} S'
         rows.append(f'<details class="standing"><summary><span class="place">{rank}</span><span><b>{h(name)}</b><small>{coverage}</small></span><strong>{num}</strong></summary><div class="contributions">{"".join(contributors)}</div></details>')
     return ''.join(rows)
@@ -460,13 +460,13 @@ def favorites():
             + ''.join(cards) + '</section>')
 
 animals=''.join(f'<a href="tiers/{slug}.html">{drawing}<span>{h(title)}</span></a>' for slug,(title,drawing,_,_) in sorted(atlas.items(),key=lambda x:x[1][0]))
-content=f'''<header class="tier-hero ranking-hero"><div><p class="kicker">Counterfactual Zoo</p><h1>The tier list</h1><p>I get two S+ picks. The animals get to grade everything else.</p></div></header>
+content=f'''<header class="tier-hero ranking-hero"><div><p class="kicker">Counterfactual Zoo</p><h1>The tier list</h1><p>I gave my two favorite lenses S+. Below that, you can see how they actually did.</p></div></header>
 {favorites()}
-<nav class="tier-jumps" aria-label="Jump to a ranking"><a href="#most-s">Most S grades</a><a href="#weighted">Weighted ranking</a><a href="#animals">By animal</a></nav>
-<div class="rank-pair"><section id="most-s"><h2>Most S grades</h2><p>One S per animal. Click a technique to see who gave it one.</p>{rankings(False)}</section>
-<section id="weighted"><h2>The zookeeper’s ranking</h2><p>S = 10 · A = 5 · B = 3 · C = 1 · D = 0. Average within each animal, then across animals.</p>{rankings(True)}</section></div>
-<details class="rulebook"><summary>How the scoring works</summary><p>{h(RULE)}</p><p>Each animal gets one vote. Two spider states count as much as 200 key stories. Open a grade to see the rows.</p><p>Ungraded trials sit out. The three Skeleton Lens branches share a spot, as do the two J-lens fits and the GANPaint brushes. Ties share a place.</p></details>
-<h2 id="animals">Find an animal</h2><div class="animal-directory">{animals}</div>'''
+<nav class="tier-jumps" aria-label="Jump to a ranking"><a href="#most-s">Most S grades</a><a href="#weighted">Weighted ranking</a><a href="#exhibits">By exhibit</a></nav>
+<div class="rank-pair"><section id="most-s"><h2>Most S grades</h2><p>A technique can earn one S per exhibit. Click a technique to see where it earned its grades.</p>{rankings(False)}</section>
+<section id="weighted"><h2>The zookeeper’s ranking</h2><p>S = 10 · A = 5 · B = 3 · C = 1 · D = 0. Average within each exhibit, then across exhibits.</p>{rankings(True)}</section></div>
+<details class="rulebook"><summary>How the scoring works</summary><p>{h(RULE)}</p><p>Each exhibit gets one vote. Two spider states count as much as 200 key stories. Open a grade to see the rows.</p><p>Ungraded trials sit out. The three Skeleton Lens branches share a spot, as do the two J-lens fits and the GANPaint brushes. Ties share a place.</p></details>
+<div id="animals"><h2 id="exhibits">Find an exhibit</h2></div><div class="animal-directory">{animals}</div>'''
 (SITE/'tier-list.html').write_text(page('The tier list',content,''))
 for name in ['index','notebook','range']:
     nav(SITE/(name+'.html'),'')

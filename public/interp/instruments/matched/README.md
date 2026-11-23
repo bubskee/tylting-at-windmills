@@ -26,7 +26,7 @@ The function-vector readout uses four demonstration queries during head selectio
 
 All four 9B Legs outcomes and all 64 9B article top tokens agree with the earlier runs. The three 9B Brass constrained choices agree in both conditions. The Llama article rerun matches 59 of 64 archived edited top tokens. It used eager attention on MPS in single prompts, while the archive used batched CUDA SDPA. The two 4B Rabbit clean lines and one of the two edited lines match exactly. The other edited line ends in “dead” in the rerun and “sand” in the archive. Each discrepancy is attached to its case and retained in `CHECKS.json`.
 
-## Adding the next animal
+## Adding the next exhibit
 
 1. Register the case, literal receiver and donor, checkpoint revision, edited and read positions, token IDs, layer, hook and condition before displaying a result. For spatial and board models use native cell or move coordinates.
 2. Run the whole instrument roster on those two states. Record real coordinates, reference contexts, signed projections, token ranks, receiver controls and actual generated outputs as appropriate. Keep flat and failed trials. Put comparisons that change the model, site, receiver or intervention in their own named case.
