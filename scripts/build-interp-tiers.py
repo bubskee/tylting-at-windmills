@@ -433,9 +433,40 @@ def rankings(weighted):
         rows.append(f'<details class="standing"><summary><span class="place">{rank}</span><span><b>{h(name)}</b><small>{coverage}</small></span><strong>{num}</strong></summary><div class="contributions">{"".join(contributors)}</div></details>')
     return ''.join(rows)
 
-drawings=''.join(atlas[k][1] for k in ['leg-day','pass-the-brass','the-e6-incident'])
+def favorites():
+    # Editorial picks use the same instrument, case and checkpoint as their receipts.
+    cards = []
+    spider = atlas['leg-day'][1].replace('viewBox="0 0 194 96"', 'viewBox="4 8 84 84"')
+    for tool, reader, flavor in [
+        ('J', 'leg-day', 'We asked for a number. It found the spider.'),
+        ('raw', 'leg-day-4b', 'The spider says “{top}”. Permanent spot on the team.'),
+    ]:
+        trial = next(g for g in atlas['leg-day'][2] if g.tool == tool and g.mode == 'Read')
+        record = load(SITE / record_path(reader))
+        case = next(c for c in record['cases'] if c['id'] == 'spider-from-bee')
+        top = case['lenses'][tool][0]['top'][0]['token'].strip()
+        portrait = spider if tool == 'J' else f'<span class="token-portrait">{h(top)}</span>'
+        name = toolnames[tool]
+        cards.append(f'''<article class="pull-card">
+          <a class="pull-reader" href="{h(bench(reader,case['id'],tool))}" aria-label="Open {h(name)} on the spider clue">
+            <span class="pull-portrait" aria-hidden="true">{portrait}</span>
+            <span><b>{h(name)}</b><small>{h(record['model'].split('/')[-1])} · block {record['layer']}</small></span>
+          </a>
+          <p>{h(flavor.format(top=top))}</p>
+          <a class="pull-score" href="tiers/leg-day.html#{h(trial.anchor)}">Leg Day score · {trial.grade} · {trial.hit}/{trial.total}</a>
+        </article>''')
+    return ('<section class="picks-row" id="s-plus" aria-labelledby="picks-title"><header>'
+            '<strong>S+</strong><h2 id="picks-title">Zookeeper’s picks</h2></header>'
+            + ''.join(cards) + '</section>')
+
 animals=''.join(f'<a href="tiers/{slug}.html">{drawing}<span>{h(title)}</span></a>' for slug,(title,drawing,_,_) in sorted(atlas.items(),key=lambda x:x[1][0]))
-content=f'''<header class="tier-hero ranking-hero"><div><p class="kicker">Counterfactual Zoo</p><h1>The tier list</h1><p>Who gets an S on spider legs? Open a technique to see which animals earned its place.</p><a class="example-s" href="tiers/awkward-pause.html#group-edit"><span>S</span> Inspect the six-neuron removal</a></div><div class="menagerie">{drawings}</div></header><nav class="tier-jumps" aria-label="Jump to a ranking"><a href="#most-s">Most S grades</a><a href="#weighted">Weighted ranking</a><a href="#animals">By animal</a></nav><div class="rank-pair"><section id="most-s"><h2>Most S grades</h2><p>An animal awards one S per technique, even when both a read and an edit earn one.</p>{rankings(False)}</section><section id="weighted"><h2>The zookeeper’s ranking</h2><p>S = 10 · A = 5 · B = 3 · C = 1 · D = 0. Average the grades within each animal, then average across scored animals.</p>{rankings(True)}</section></div><details class="rulebook"><summary>How to read the rankings</summary><p>{h(RULE)}</p><p>A two-state replay can earn the same S as a 200-story run. Open a letter for its sample size, checkpoint, baseline and saved rows. Ungraded instruments contribute to neither ranking. The three Skeleton Lens branches share one entry, as do both J-lens fits and the named GANPaint brushes. Each variant’s grade is visible in the expanded ranking. Exact ties share a place.</p></details><h2 id="animals">Find an animal</h2><div class="animal-directory">{animals}</div>'''
+content=f'''<header class="tier-hero ranking-hero"><div><p class="kicker">Counterfactual Zoo</p><h1>The tier list</h1><p>I get two S+ picks. The animals get to grade everything else.</p></div></header>
+{favorites()}
+<nav class="tier-jumps" aria-label="Jump to a ranking"><a href="#most-s">Most S grades</a><a href="#weighted">Weighted ranking</a><a href="#animals">By animal</a></nav>
+<div class="rank-pair"><section id="most-s"><h2>Most S grades</h2><p>One S per animal. Click a technique to see who gave it one.</p>{rankings(False)}</section>
+<section id="weighted"><h2>The zookeeper’s ranking</h2><p>S = 10 · A = 5 · B = 3 · C = 1 · D = 0. Average within each animal, then across animals.</p>{rankings(True)}</section></div>
+<details class="rulebook"><summary>How the scoring works</summary><p>{h(RULE)}</p><p>Each animal gets one vote. Two spider states count as much as 200 key stories. Open a grade to see the rows.</p><p>Ungraded trials sit out. The three Skeleton Lens branches share a spot, as do the two J-lens fits and the GANPaint brushes. Ties share a place.</p></details>
+<h2 id="animals">Find an animal</h2><div class="animal-directory">{animals}</div>'''
 (SITE/'tier-list.html').write_text(page('The tier list',content,''))
 for name in ['index','notebook','range']:
     nav(SITE/(name+'.html'),'')
