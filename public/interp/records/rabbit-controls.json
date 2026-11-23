@@ -1,0 +1,535 @@
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "hook": "output of decoder block L; sites are the newline after line one and the last token of line one's last word",
+  "summary": {
+    "couplets": 96,
+    "free_ends_on_planned": 11,
+    "free_ends_on_a_rhyme": 62,
+    "stub_first_is_planned": 75,
+    "usable_for_patching": 40,
+    "patches": {
+      "newline, one layer": {
+        "couplets": 40,
+        "by_layer": [
+          {
+            "own": 40,
+            "donor": 0,
+            "other": 0
+          },
+          {
+            "own": 38,
+            "donor": 0,
+            "other": 2
+          },
+          {
+            "own": 37,
+            "donor": 0,
+            "other": 3
+          },
+          {
+            "own": 36,
+            "donor": 0,
+            "other": 4
+          },
+          {
+            "own": 36,
+            "donor": 0,
+            "other": 4
+          },
+          {
+            "own": 34,
+            "donor": 0,
+            "other": 6
+          },
+          {
+            "own": 35,
+            "donor": 0,
+            "other": 5
+          },
+          {
+            "own": 34,
+            "donor": 0,
+            "other": 6
+          },
+          {
+            "own": 36,
+            "donor": 0,
+            "other": 4
+          },
+          {
+            "own": 36,
+            "donor": 0,
+            "other": 4
+          },
+          {
+            "own": 35,
+            "donor": 0,
+            "other": 5
+          },
+          {
+            "own": 33,
+            "donor": 0,
+            "other": 7
+          },
+          {
+            "own": 35,
+            "donor": 0,
+            "other": 5
+          },
+          {
+            "own": 35,
+            "donor": 0,
+            "other": 5
+          },
+          {
+            "own": 34,
+            "donor": 0,
+            "other": 6
+          },
+          {
+            "own": 35,
+            "donor": 0,
+            "other": 5
+          },
+          {
+            "own": 34,
+            "donor": 0,
+            "other": 6
+          },
+          {
+            "own": 36,
+            "donor": 0,
+            "other": 4
+          },
+          {
+            "own": 37,
+            "donor": 0,
+            "other": 3
+          },
+          {
+            "own": 31,
+            "donor": 1,
+            "other": 8
+          },
+          {
+            "own": 34,
+            "donor": 0,
+            "other": 6
+          },
+          {
+            "own": 33,
+            "donor": 0,
+            "other": 7
+          },
+          {
+            "own": 32,
+            "donor": 0,
+            "other": 8
+          },
+          {
+            "own": 35,
+            "donor": 0,
+            "other": 5
+          },
+          {
+            "own": 30,
+            "donor": 1,
+            "other": 9
+          },
+          {
+            "own": 31,
+            "donor": 0,
+            "other": 9
+          },
+          {
+            "own": 32,
+            "donor": 0,
+            "other": 8
+          },
+          {
+            "own": 31,
+            "donor": 0,
+            "other": 9
+          },
+          {
+            "own": 30,
+            "donor": 0,
+            "other": 10
+          },
+          {
+            "own": 29,
+            "donor": 0,
+            "other": 11
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          }
+        ]
+      },
+      "newline, layer L and up": {
+        "couplets": 40,
+        "by_layer": [
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 30,
+            "donor": 0,
+            "other": 10
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 26,
+            "donor": 0,
+            "other": 14
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 30,
+            "donor": 0,
+            "other": 10
+          },
+          {
+            "own": 30,
+            "donor": 0,
+            "other": 10
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 29,
+            "donor": 0,
+            "other": 11
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 27,
+            "donor": 0,
+            "other": 13
+          },
+          {
+            "own": 26,
+            "donor": 0,
+            "other": 14
+          },
+          {
+            "own": 28,
+            "donor": 0,
+            "other": 12
+          }
+        ]
+      },
+      "word, one layer": {
+        "couplets": 40,
+        "by_layer": [
+          {
+            "own": 4,
+            "donor": 22,
+            "other": 14
+          },
+          {
+            "own": 5,
+            "donor": 23,
+            "other": 12
+          },
+          {
+            "own": 5,
+            "donor": 25,
+            "other": 10
+          },
+          {
+            "own": 5,
+            "donor": 23,
+            "other": 12
+          },
+          {
+            "own": 5,
+            "donor": 24,
+            "other": 11
+          },
+          {
+            "own": 5,
+            "donor": 27,
+            "other": 8
+          },
+          {
+            "own": 5,
+            "donor": 26,
+            "other": 9
+          },
+          {
+            "own": 5,
+            "donor": 25,
+            "other": 10
+          },
+          {
+            "own": 4,
+            "donor": 25,
+            "other": 11
+          },
+          {
+            "own": 6,
+            "donor": 26,
+            "other": 8
+          },
+          {
+            "own": 6,
+            "donor": 25,
+            "other": 9
+          },
+          {
+            "own": 6,
+            "donor": 23,
+            "other": 11
+          },
+          {
+            "own": 6,
+            "donor": 24,
+            "other": 10
+          },
+          {
+            "own": 5,
+            "donor": 25,
+            "other": 10
+          },
+          {
+            "own": 6,
+            "donor": 23,
+            "other": 11
+          },
+          {
+            "own": 5,
+            "donor": 22,
+            "other": 13
+          },
+          {
+            "own": 5,
+            "donor": 22,
+            "other": 13
+          },
+          {
+            "own": 4,
+            "donor": 21,
+            "other": 15
+          },
+          {
+            "own": 5,
+            "donor": 19,
+            "other": 16
+          },
+          {
+            "own": 25,
+            "donor": 3,
+            "other": 12
+          },
+          {
+            "own": 24,
+            "donor": 3,
+            "other": 13
+          },
+          {
+            "own": 25,
+            "donor": 3,
+            "other": 12
+          },
+          {
+            "own": 26,
+            "donor": 1,
+            "other": 13
+          },
+          {
+            "own": 29,
+            "donor": 1,
+            "other": 10
+          },
+          {
+            "own": 30,
+            "donor": 1,
+            "other": 9
+          },
+          {
+            "own": 30,
+            "donor": 1,
+            "other": 9
+          },
+          {
+            "own": 29,
+            "donor": 1,
+            "other": 10
+          },
+          {
+            "own": 36,
+            "donor": 0,
+            "other": 4
+          },
+          {
+            "own": 39,
+            "donor": 0,
+            "other": 1
+          },
+          {
+            "own": 39,
+            "donor": 0,
+            "other": 1
+          },
+          {
+            "own": 40,
+            "donor": 0,
+            "other": 0
+          },
+          {
+            "own": 39,
+            "donor": 0,
+            "other": 1
+          }
+        ]
+      },
+      "word, all layers": {
+        "couplets": 40,
+        "by_layer": [
+          {
+            "own": 6,
+            "donor": 16,
+            "other": 18
+          }
+        ]
+      },
+      "word to newline, all layers": {
+        "couplets": 40,
+        "by_layer": [
+          {
+            "own": 1,
+            "donor": 20,
+            "other": 19
+          }
+        ]
+      }
+    }
+  },
+  "source": "first-batch/rabbit/rabbit-4b-controls.json",
+  "clean_controls": {
+    "own_end_word": 49,
+    "new_listed_rhyme": 13,
+    "both_new_listed_rhyme": 0
+  }
+}

@@ -1,0 +1,620 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Rabbit Kicks the Habit · Counterfactual Zoo</title><link rel="stylesheet" href="assets/paper.css"><link rel="stylesheet" href="assets/instruments.css"><link rel="stylesheet" href="assets/zoo.css"></head><body><a class="skip" href="#main">Skip to content</a><nav class="topbar" aria-label="Weekend exhibits"><a class="brand" href="index.html">Weekend field notes</a><span class="navlinks"><a href="index.html#zoo">Zoo</a><a href="range.html#run=Qwen3.5-4B-handoff&event=edit&method=ica&story=keys-test-0">Range</a><a href="notebook.html#lens">Lens</a><a href="notebook.html#controls">Controls</a></span></nav><main id="main"><header class="exhibit-head"><div><p class="kicker">Measured replay · Qwen3.5-4B</p><h1>Rabbit Kicks the Habit</h1><p class="lead">Can the last token of one line change the rhyme of the next?</p><!--tool-entry--><a class="instrument-link" href="instruments/rabbit.html">What does every other tool say?</a><!--/tool-entry--></div><svg viewBox="0 0 194 96" aria-hidden="true"><text x="16" y="44" fill="#302e29" font-family="Georgia,serif" font-size="23" style="font-style:italic">grab it</text><path d="M16 49L82 49" stroke="#bdb6a5" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"></path><path d="M88 42q10 1 15 -9t15 -6 M88 42q11 2 15 15t15 10" stroke="#985232" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"></path><text x="123" y="33" fill="#302e29" font-family="Georgia,serif" font-size="20" style="font-style:italic">rabbit</text><text x="122" y="73" fill="#985232" font-family="Georgia,serif" font-size="20" style="font-style:italic">habit</text></svg></header><!--exhibit-story--><aside class="exhibit-story" aria-label="Story and sources"><p>A poet who has already picked a rhyme can start steering the line several words early. Anthropic traced that possibility in a rabbit poem. Our couplet ends its first line on “gray.” At the newline, borrow a state from a poem about a painter’s heart and watch where the next line goes.</p><div><small>Original study</small><a href="https://transformer-circuits.pub/2025/attribution-graphs/biology.html">Anthropic · Planning in Poems</a><a class="local-source" href="records/rabbit-4b.json">Zoo experiment · saved rows</a></div></aside><!--/exhibit-story-->
+<p class="prose">In the published Claude 3.5 Haiku example, suppressing features for <em>rabbit</em> made room for <em>habit</em>. We tried a different move on Qwen. Keep the first line and copy the newline state from another couplet. <a href="https://transformer-circuits.pub/2025/attribution-graphs/biology.html">Original poetry study</a></p>
+<section class="plate"><div class="controls"><label for="couplet">Couplet</label><select id="couplet"><option value="0">First eligible pair · gray</option><option value="1">Only donor-rhyme hit · dead</option></select><label for="layer">Block</label><select id="layer"></select></div>
+<p class="caption">First line · held fixed</p><p class="measure held" id="poem"></p><p class="caption" id="donor-line"></p><button id="rpatch" class="intervene">Copy the donor newline</button>
+<div aria-live="polite"><p class="measure" id="completion"></p><span class="caption" id="rstatus"></span></div></section>
+<p class="credits" id="rsite"></p><p class="prose">Both clean lines had to end in a word on their own rhyme list. That left 40 pairs. Across 32 patch layers, 1 of 1,280 edits landed on a donor rhyme. A list can miss a perfectly good rhyme, so the count depends on the word bank.</p>
+<p class="credits">Couplets from Blank, Bhatia, Ong and Nanda’s <a href="https://github.com/camila-blank/workspace-bench">WorkspaceBench</a>. <a href="records/rabbit-4b.json">Replay rows, selection rule and layer totals</a></p></main><footer class="route"><a href="index.html#zoo">Illustrated index</a><a href="index.html#pick-plate10">Back to the rabbit</a></footer><script id="pilot" type="application/json">{
+  "model": "Qwen/Qwen3.5-4B",
+  "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "hook": "output of decoder block L, newline token after line one",
+  "source": "first-batch/rabbit/rabbit-4b.json",
+  "source_sha256": "66e497ec9e3c66114d88da2abcc339a4a7b0aae886a61bc054ef93ce4213c957",
+  "layers": 32,
+  "new_tokens": 24,
+  "prompt_bank": "https://github.com/camila-blank/workspace-bench",
+  "prompt_credit": "WorkspaceBench · Camila Blank, Agam Bhatia, Euan Ong and Neel Nanda",
+  "summary": {
+    "couplets": 96,
+    "free_ends_on_planned": 11,
+    "free_ends_on_a_rhyme": 62,
+    "stub_first_is_planned": 75,
+    "usable_for_patching": 40,
+    "by_layer": [
+      {
+        "own": 38,
+        "donor": 0,
+        "other": 2
+      },
+      {
+        "own": 37,
+        "donor": 0,
+        "other": 3
+      },
+      {
+        "own": 35,
+        "donor": 0,
+        "other": 5
+      },
+      {
+        "own": 36,
+        "donor": 0,
+        "other": 4
+      },
+      {
+        "own": 38,
+        "donor": 0,
+        "other": 2
+      },
+      {
+        "own": 36,
+        "donor": 0,
+        "other": 4
+      },
+      {
+        "own": 37,
+        "donor": 0,
+        "other": 3
+      },
+      {
+        "own": 36,
+        "donor": 0,
+        "other": 4
+      },
+      {
+        "own": 35,
+        "donor": 0,
+        "other": 5
+      },
+      {
+        "own": 36,
+        "donor": 0,
+        "other": 4
+      },
+      {
+        "own": 34,
+        "donor": 0,
+        "other": 6
+      },
+      {
+        "own": 36,
+        "donor": 0,
+        "other": 4
+      },
+      {
+        "own": 34,
+        "donor": 0,
+        "other": 6
+      },
+      {
+        "own": 38,
+        "donor": 0,
+        "other": 2
+      },
+      {
+        "own": 34,
+        "donor": 0,
+        "other": 6
+      },
+      {
+        "own": 33,
+        "donor": 0,
+        "other": 7
+      },
+      {
+        "own": 32,
+        "donor": 0,
+        "other": 8
+      },
+      {
+        "own": 35,
+        "donor": 0,
+        "other": 5
+      },
+      {
+        "own": 35,
+        "donor": 1,
+        "other": 4
+      },
+      {
+        "own": 34,
+        "donor": 0,
+        "other": 6
+      },
+      {
+        "own": 34,
+        "donor": 0,
+        "other": 6
+      },
+      {
+        "own": 32,
+        "donor": 0,
+        "other": 8
+      },
+      {
+        "own": 32,
+        "donor": 0,
+        "other": 8
+      },
+      {
+        "own": 33,
+        "donor": 0,
+        "other": 7
+      },
+      {
+        "own": 30,
+        "donor": 0,
+        "other": 10
+      },
+      {
+        "own": 33,
+        "donor": 0,
+        "other": 7
+      },
+      {
+        "own": 33,
+        "donor": 0,
+        "other": 7
+      },
+      {
+        "own": 32,
+        "donor": 0,
+        "other": 8
+      },
+      {
+        "own": 29,
+        "donor": 0,
+        "other": 11
+      },
+      {
+        "own": 28,
+        "donor": 0,
+        "other": 12
+      },
+      {
+        "own": 30,
+        "donor": 0,
+        "other": 10
+      },
+      {
+        "own": 27,
+        "donor": 0,
+        "other": 13
+      }
+    ],
+    "edit_counts": {
+      "own": 1082,
+      "donor": 1,
+      "other": 197
+    },
+    "edits": 1280
+  },
+  "eligibility": "Both the source and donor free endings must appear in their respective candidate rhyme lists.",
+  "scoring": "A line ending in the recipient's candidate list is labelled own, an ending in the donor's list is labelled donor, and other endings are labelled other. Candidate lists miss some valid rhymes.",
+  "selection": "The first eligible pair in archive order and the only eligible pair with a donor-labelled patch.",
+  "rows": [
+    {
+      "id": "couplet-gray-day",
+      "free_prompt": "A rhyming couplet:\nThe dawn broke through the clouds of silver gray,\n",
+      "stub": "And ushered in another working ",
+      "line_one_end": "gray",
+      "planned": "day",
+      "donor": "couplet-heart-art",
+      "site": 18,
+      "site_token": "\n",
+      "free_line": "And cast a light upon the morning day.",
+      "free_last": "day",
+      "stub_line": " day.",
+      "stub_first": "day",
+      "patched": [
+        {
+          "layer": 0,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 1,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 2,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 3,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 4,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 5,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 6,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 7,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 8,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 9,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 10,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 11,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 12,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 13,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 14,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 15,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 16,
+          "line": "And cast a light upon the morning day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 17,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 18,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 19,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 20,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 21,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 22,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 23,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 24,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 25,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 26,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 27,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 28,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 29,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 30,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        },
+        {
+          "layer": 31,
+          "line": "The sun rose up to greet the day.",
+          "last": "day",
+          "label": "own"
+        }
+      ],
+      "donor_prompt": "A rhyming couplet:\nThe painter poured emotion from his heart,\n",
+      "donor_line": "The painter poured emotion from his heart,",
+      "donor_last": "heart"
+    },
+    {
+      "id": "couplet-dead-red",
+      "free_prompt": "A rhyming couplet:\nThe roses on the grave had long been dead,\n",
+      "stub": "But once had bloomed a brilliant shade of ",
+      "line_one_end": "dead",
+      "planned": "red",
+      "donor": "v3-po-sand-land",
+      "site": 18,
+      "site_token": "\n",
+      "free_line": "But now the roses on the grave are red.",
+      "free_last": "red",
+      "stub_line": " red.",
+      "stub_first": "red",
+      "patched": [
+        {
+          "layer": 0,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 1,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 2,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 3,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 4,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 5,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 6,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 7,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 8,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 9,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 10,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 11,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 12,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 13,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 14,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 15,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 16,
+          "line": "But now the roses on the grave are red.",
+          "last": "red",
+          "label": "own"
+        },
+        {
+          "layer": 17,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 18,
+          "line": "And the green grass had turned to yellow sand.",
+          "last": "sand",
+          "label": "donor"
+        },
+        {
+          "layer": 19,
+          "line": "And now the roses on the grave are dead.",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 20,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 21,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 22,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 23,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 24,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 25,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 26,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 27,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 28,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 29,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 30,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        },
+        {
+          "layer": 31,
+          "line": "The roses on the grave had long been dead,",
+          "last": "dead",
+          "label": "own"
+        }
+      ],
+      "donor_prompt": "A rhyming couplet:\nThe ship had sailed for months, then sighted sand,\n",
+      "donor_line": "The ship had sailed for months, then sighted sand,",
+      "donor_last": "sand"
+    }
+  ]
+}
+</script><script src="assets/rabbit.js"></script></body></html>

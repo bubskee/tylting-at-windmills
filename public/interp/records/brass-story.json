@@ -1,0 +1,191 @@
+{
+  "checkpoint": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "source": "https://huggingface.co/Qwen/Qwen3.5-4B/tree/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+  },
+  "run": "Qwen3.5-4B-handoff",
+  "site": {
+    "layer": 7,
+    "hook": "decoder block output",
+    "token": "final token of metal word",
+    "receiver": "brass",
+    "donor": "silver",
+    "intervention": "Replace the entire receiver residual vector here with the donor vector."
+  },
+  "archive": [
+    {
+      "file": "keys-results.json",
+      "sha256": "2d426630bfdcf56c3d8173175482dade309c3be8de78b192e024a84a259f20e4",
+      "selection": "row 0 of 200"
+    },
+    {
+      "file": "protocol.json",
+      "sha256": "b25e73d9a8806c7ba067d1bf4b6d4af466fbf669f7871ea40c777145c92f72eb"
+    },
+    {
+      "file": "provenance.json",
+      "sha256": "3dd331f08c93c5bdb89e5e8dba5eecd925da43010e806d4b23faf876b1fe0bb1",
+      "selection": "models[\"Qwen/Qwen3.5-4B\"]"
+    }
+  ],
+  "metric": "Logit of the first token of option 1 minus the logit of the first token of option 0. Positive favors the second option. base and donor are natural prompts, patch is the original prompt with a full state replacement.",
+  "case": {
+    "id": "keys-test-0",
+    "side": 0,
+    "lead": "Ella has the map. Nina and Tom each carry one key. Nina carries the",
+    "piv": [
+      "brass",
+      "silver"
+    ],
+    "qs": [
+      {
+        "k": "direct",
+        "suffix": " key. Tom carries the other key.\nQuestion: Who has the brass key?\nAnswer:",
+        "opts": [
+          "Nina",
+          "Tom"
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      {
+        "k": "fit-wording",
+        "suffix": " key. Tom carries the other key.\nQuestion: Nina gives everything to Ella. Which door can Ella unlock, brass or silver?\nAnswer:",
+        "opts": [
+          "brass",
+          "silver"
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      {
+        "k": "paraphrase",
+        "suffix": " key. Tom carries the other key.\nQuestion: Nina hands over the key to Ella. What metal is the lock that Ella can now open?\nAnswer:",
+        "opts": [
+          "brass",
+          "silver"
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      {
+        "k": "relay",
+        "suffix": " key. Tom carries the other key.\nQuestion: Nina passes the key to Ella, who hands it to Jane. Which door can Jane now open?\nAnswer:",
+        "opts": [
+          "brass",
+          "silver"
+        ],
+        "y": [
+          0,
+          1
+        ]
+      },
+      {
+        "k": "map",
+        "suffix": " key. Tom carries the other key.\nQuestion: Who has the map?\nAnswer:",
+        "opts": [
+          "Ella",
+          "Jane"
+        ],
+        "y": [
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "answers": [
+    {
+      "base": -4.53436,
+      "donor": 2.71259,
+      "patch": -4.82926,
+      "forecast_means": -4.79406,
+      "forecast_ace": -4.71773,
+      "forecast_gradient": -4.61954,
+      "forecast_ica": -4.46478,
+      "forecast_gradica": -4.53686,
+      "forecast_pca": -4.64202,
+      "edit_means": -4.81231,
+      "edit_ace": -4.83809,
+      "edit_gradient": -4.66767,
+      "edit_ica": -4.42789,
+      "edit_gradica": -4.55766,
+      "edit_pca": -4.64724
+    },
+    {
+      "base": -2.10244,
+      "donor": 1.42415,
+      "patch": 2.55975,
+      "forecast_means": 2.5775,
+      "forecast_ace": 2.49623,
+      "forecast_gradient": -0.71018,
+      "forecast_ica": 2.30896,
+      "forecast_gradica": -1.9534,
+      "forecast_pca": 2.39778,
+      "edit_means": 2.51207,
+      "edit_ace": 2.48478,
+      "edit_gradient": 2.14172,
+      "edit_ica": 2.34153,
+      "edit_gradica": -0.45704,
+      "edit_pca": 2.37379
+    },
+    {
+      "base": -4.53319,
+      "donor": 7.24348,
+      "patch": 7.12744,
+      "forecast_means": 7.18056,
+      "forecast_ace": 7.19688,
+      "forecast_gradient": -2.725,
+      "forecast_ica": 6.19871,
+      "forecast_gradica": -4.45051,
+      "forecast_pca": 6.49508,
+      "edit_means": 7.17441,
+      "edit_ace": 7.18606,
+      "edit_gradient": 2.17042,
+      "edit_ica": 6.67444,
+      "edit_gradica": -1.60674,
+      "edit_pca": 6.63845
+    },
+    {
+      "base": -4.06166,
+      "donor": 6.98822,
+      "patch": 6.83582,
+      "forecast_means": 6.89404,
+      "forecast_ace": 6.84967,
+      "forecast_gradient": -2.21657,
+      "forecast_ica": 5.88899,
+      "forecast_gradica": -3.89423,
+      "forecast_pca": 6.19058,
+      "edit_means": 6.9171,
+      "edit_ace": 6.87465,
+      "edit_gradient": 2.28972,
+      "edit_ica": 6.3188,
+      "edit_gradica": -1.17824,
+      "edit_pca": 6.39627
+    },
+    {
+      "base": -9.54402,
+      "donor": -9.37177,
+      "patch": -9.36536,
+      "forecast_means": -9.38344,
+      "forecast_ace": -9.39433,
+      "forecast_gradient": -9.54394,
+      "forecast_ica": -9.34228,
+      "forecast_gradica": -9.55555,
+      "forecast_pca": -9.281,
+      "edit_means": -9.35809,
+      "edit_ace": -9.36555,
+      "edit_gradient": -9.41826,
+      "edit_ica": -9.19496,
+      "edit_gradica": -9.52599,
+      "edit_pca": -9.26826
+    }
+  ]
+}

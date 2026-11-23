@@ -50,6 +50,7 @@ The Astro `site` fallback in `astro.config.mjs` is `https://tylting.at`, with `b
 - /windmills/writing/the-first-step/ — first article / Colab
 - /windmills/series/hctigt/ — HCTiGT series
 - /windmills/projects/ — projects
+- /interp/ — one weekend in interp, including the illustrated Counterfactual Zoo. The self-contained exhibit lives in `public/interp/` and the build moves it to the domain root.
 - /windmills/about/ — about
 - /windmills/rss.xml — RSS
 

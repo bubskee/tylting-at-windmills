@@ -1,0 +1,1222 @@
+{
+  "groups": {
+    "an": {
+      "n": 16,
+      "passed": 0,
+      "medians": {
+        "remove": 1.298302412033081,
+        "keep": 0.9378936588764191,
+        "hubs": 2.6988589763641357
+      },
+      "strongest_single": 0.09596788510680199,
+      "random_removal": 0.0002627409412525594,
+      "median_vowel_mass": {
+        "clean": 0.9465294182300568,
+        "remove": 0.22054680436849594,
+        "keep": 0.8831299841403961
+      }
+    },
+    "a": {
+      "n": 16,
+      "passed": 0,
+      "medians": {
+        "remove": 0.0019633477204479277,
+        "keep": 1.6133363842964172,
+        "hubs": 1.5528478622436523
+      },
+      "strongest_single": 0.0017112338682636619,
+      "random_removal": 0.0002987496118294075,
+      "median_vowel_mass": {
+        "clean": 0.003903668839484453,
+        "remove": 0.0038158647948876023,
+        "keep": 0.005122612928971648
+      }
+    },
+    "the": {
+      "n": 16,
+      "passed": 0,
+      "medians": {
+        "remove": 0.0007018198957666755,
+        "keep": 1.1477192640304565,
+        "hubs": 1.1335180401802063
+      },
+      "strongest_single": 0.0005138410779181868,
+      "random_removal": 0.0002802699600579217,
+      "median_vowel_mass": {
+        "clean": 0.1343214437365532,
+        "remove": 0.14178961515426636,
+        "keep": 0.07508867233991623
+      }
+    },
+    "German an": {
+      "n": 8,
+      "passed": 0,
+      "medians": {
+        "remove": 0.0004093382158316672,
+        "keep": 2.683615803718567,
+        "hubs": 2.630902886390686
+      },
+      "strongest_single": 0.0005555024836212397,
+      "random_removal": 0.00020748638780787587,
+      "median_vowel_mass": {
+        "clean": 0.14776594191789627,
+        "remove": 0.14951835572719574,
+        "keep": 0.006925835972651839
+      }
+    },
+    "mention an": {
+      "n": 8,
+      "passed": 0,
+      "medians": {
+        "remove": 0.12650217860937119,
+        "keep": 1.5778269171714783,
+        "hubs": 2.009194791316986
+      },
+      "strongest_single": 0.028203748166561127,
+      "random_removal": 0.0003295837086625397,
+      "median_vowel_mass": {
+        "clean": 0.11559750884771347,
+        "remove": 0.045340726152062416,
+        "keep": 0.06844823993742466
+      }
+    }
+  },
+  "attic": {
+    "key": "05-an",
+    "group": "an",
+    "prompt": "Somewhere in the attic there must be an",
+    "conditions": {
+      "clean": {
+        "kl": 0.0,
+        "vowel_mass": 0.9855022430419922,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8034476637840271
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.018895277753472328
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.01011391170322895
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006134396884590387
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005413586739450693
+          }
+        ]
+      },
+      "remove": {
+        "kl": 1.0924574136734009,
+        "vowel_mass": 0.32718050479888916,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.2446788251399994
+          },
+          {
+            "token": " box",
+            "id": 3618,
+            "p": 0.10857558250427246
+          },
+          {
+            "token": " dusty",
+            "id": 74245,
+            "p": 0.02008446305990219
+          },
+          {
+            "token": " photo",
+            "id": 6345,
+            "p": 0.015641795471310616
+          },
+          {
+            "token": " stack",
+            "id": 5436,
+            "p": 0.015641795471310616
+          }
+        ]
+      },
+      "keep": {
+        "kl": 0.2946937084197998,
+        "vowel_mass": 0.9882848858833313,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.9475518465042114
+          },
+          {
+            "token": " older",
+            "id": 8742,
+            "p": 0.007701242808252573
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.005634349770843983
+          },
+          {
+            "token": "\n",
+            "id": 198,
+            "p": 0.004671039991080761
+          },
+          {
+            "token": " ",
+            "id": 220,
+            "p": 0.004122178070247173
+          }
+        ]
+      },
+      "hubs": {
+        "kl": 0.7453638315200806,
+        "vowel_mass": 0.6096530556678772,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.5777050852775574
+          },
+          {
+            "token": " box",
+            "id": 3618,
+            "p": 0.09430775791406631
+          },
+          {
+            "token": " ",
+            "id": 220,
+            "p": 0.03931332752108574
+          },
+          {
+            "token": "\n",
+            "id": 198,
+            "p": 0.028762241825461388
+          },
+          {
+            "token": " collection",
+            "id": 4281,
+            "p": 0.018570300191640854
+          }
+        ]
+      },
+      "random-0": {
+        "kl": 4.7870431444607675e-05,
+        "vowel_mass": 0.9854722023010254,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8028789162635803
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.0188819020986557
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.010758581571280956
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.00613005505874753
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.0054097543470561504
+          }
+        ]
+      },
+      "random-1": {
+        "kl": 7.9173973063007e-05,
+        "vowel_mass": 0.985309362411499,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8038644790649414
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.01890507899224758
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.010771789588034153
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.00613758061081171
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005416396073997021
+          }
+        ]
+      },
+      "random-2": {
+        "kl": 6.884694448672235e-05,
+        "vowel_mass": 0.9855242967605591,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8041679263114929
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.018912214785814285
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.010775858536362648
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006139898672699928
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005418441724032164
+          }
+        ]
+      },
+      "random-3": {
+        "kl": 5.802925443276763e-05,
+        "vowel_mass": 0.985572338104248,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8049155473709106
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.018929800018668175
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.010132393799722195
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006145607214421034
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005423479713499546
+          }
+        ]
+      },
+      "random-4": {
+        "kl": 8.299481123685837e-05,
+        "vowel_mass": 0.9852926135063171,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8016753792762756
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.01885359361767769
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.01074245385825634
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.0065156277269124985
+          },
+          {
+            "token": " album",
+            "id": 7766,
+            "p": 0.005750021431595087
+          }
+        ]
+      },
+      "random-5": {
+        "kl": 6.926507921889424e-05,
+        "vowel_mass": 0.9852977395057678,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8032102584838867
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.018889693543314934
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.010763024911284447
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006132586859166622
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.00541198905557394
+          }
+        ]
+      },
+      "random-6": {
+        "kl": 5.122133006807417e-05,
+        "vowel_mass": 0.9855886101722717,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8029087781906128
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.018882600590586662
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.010107127949595451
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006525652017444372
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005409955512732267
+          }
+        ]
+      },
+      "random-7": {
+        "kl": 6.986368680372834e-05,
+        "vowel_mass": 0.9850693345069885,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8027080297470093
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.01887788251042366
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.010756293311715126
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006128751207143068
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005408604629337788
+          }
+        ]
+      },
+      "single-21": {
+        "kl": 0.008377679623663425,
+        "vowel_mass": 0.9732927680015564,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.7720054984092712
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.01815582625567913
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.011012065224349499
+          },
+          {
+            "token": " attic",
+            "id": 71119,
+            "p": 0.00857620406895876
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.007568473927676678
+          }
+        ]
+      },
+      "single-25": {
+        "kl": 5.021612741984427e-05,
+        "vowel_mass": 0.9853760004043579,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8030223846435547
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.018885275349020958
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.010760505683720112
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006131151225417852
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005410721991211176
+          }
+        ]
+      },
+      "single-26": {
+        "kl": 0.014217456802725792,
+        "vowel_mass": 0.9638625383377075,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.7859033942222595
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.018482675775885582
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.011933311820030212
+          },
+          {
+            "token": "\n",
+            "id": 198,
+            "p": 0.007237919140607119
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006799396127462387
+          }
+        ]
+      },
+      "single-28": {
+        "kl": 0.0012311494210734963,
+        "vowel_mass": 0.9834513664245605,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.7907657623291016
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.02107319049537182
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.012007142417132854
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.007282699458301067
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005671772640198469
+          }
+        ]
+      },
+      "single-29": {
+        "kl": 0.006964506581425667,
+        "vowel_mass": 0.972261369228363,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.7707400918006897
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.020539527758955956
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.011703070253133774
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.007098270580172539
+          },
+          {
+            "token": "\n",
+            "id": 198,
+            "p": 0.007098270580172539
+          }
+        ]
+      },
+      "single-31": {
+        "kl": 0.045916736125946045,
+        "vowel_mass": 0.9408330917358398,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.7752895951271057
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.01712838001549244
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.008090874180197716
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006707570515573025
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005919409450143576
+          }
+        ]
+      },
+      "repeat-clean": {
+        "kl": 0.0,
+        "vowel_mass": 0.9855022430419922,
+        "top": [
+          {
+            "token": " old",
+            "id": 2235,
+            "p": 0.8034476637840271
+          },
+          {
+            "token": " ancient",
+            "id": 13437,
+            "p": 0.018895277753472328
+          },
+          {
+            "token": " un",
+            "id": 632,
+            "p": 0.01011391170322895
+          },
+          {
+            "token": " unused",
+            "id": 19396,
+            "p": 0.006134396884590387
+          },
+          {
+            "token": " empty",
+            "id": 4147,
+            "p": 0.005413586739450693
+          }
+        ]
+      }
+    }
+  },
+  "sounds": [
+    {
+      "stem": "The wait was supposed to last exactly",
+      "group": "silent_h",
+      "words": [
+        "hour",
+        "minute"
+      ],
+      "effects": {
+        "clean": 15.999999734573066,
+        "remove": 6.875000059604645,
+        "keep": 16.25000003958121,
+        "hubs": 5.6249999813735485,
+        "random-0": 16.125000212341547
+      }
+    },
+    {
+      "stem": "The timer can be set for",
+      "group": "silent_h",
+      "words": [
+        "hour",
+        "minute"
+      ],
+      "effects": {
+        "clean": 14.25,
+        "remove": 5.25,
+        "keep": 14.50000011920929,
+        "hubs": 3.5,
+        "random-0": 14.15625
+      }
+    },
+    {
+      "stem": "Accepting the award was",
+      "group": "silent_h",
+      "words": [
+        "honor",
+        "privilege"
+      ],
+      "effects": {
+        "clean": 12.250000357627869,
+        "remove": 4.4375,
+        "keep": 12.5625,
+        "hubs": 2.687500238418579,
+        "random-0": 12.25000011920929
+      }
+    },
+    {
+      "stem": "It was widely considered",
+      "group": "silent_h",
+      "words": [
+        "honor",
+        "privilege"
+      ],
+      "effects": {
+        "clean": 13.468750476837158,
+        "remove": 5.03125,
+        "keep": 12.162353515625,
+        "hubs": 2.5625,
+        "random-0": 13.421875
+      }
+    },
+    {
+      "stem": "The aging monarch finally named",
+      "group": "silent_h",
+      "words": [
+        "heir",
+        "successor"
+      ],
+      "effects": {
+        "clean": 10.999999966472387,
+        "remove": 4.312499850988388,
+        "keep": 11.06250011920929,
+        "hubs": 2.4374996423721313,
+        "random-0": 10.937500189989805
+      }
+    },
+    {
+      "stem": "The estate needed",
+      "group": "silent_h",
+      "words": [
+        "heir",
+        "successor"
+      ],
+      "effects": {
+        "clean": 12.15625,
+        "remove": 3.84375,
+        "keep": 12.070312023162842,
+        "hubs": 1.9375,
+        "random-0": 12.171875476837158
+      }
+    },
+    {
+      "stem": "The interviewer was looking for",
+      "group": "silent_h",
+      "words": [
+        "honest",
+        "truthful"
+      ],
+      "effects": {
+        "clean": 11.062500476837158,
+        "remove": 4.875,
+        "keep": 10.87890625,
+        "hubs": 2.875,
+        "random-0": 11.09375
+      }
+    },
+    {
+      "stem": "The teacher asked for",
+      "group": "silent_h",
+      "words": [
+        "honest",
+        "truthful"
+      ],
+      "effects": {
+        "clean": 10.890625,
+        "remove": 4.59375,
+        "keep": 10.560546875,
+        "hubs": 2.453125,
+        "random-0": 10.890625
+      }
+    },
+    {
+      "stem": "The technician agreed to send",
+      "group": "silent_h",
+      "words": [
+        "hourly",
+        "daily"
+      ],
+      "effects": {
+        "clean": 12.8515625,
+        "remove": 4.781249523162842,
+        "keep": 12.796875,
+        "hubs": 2.5,
+        "random-0": 12.8828125
+      }
+    },
+    {
+      "stem": "The forecast is updated on",
+      "group": "silent_h",
+      "words": [
+        "hourly",
+        "daily"
+      ],
+      "effects": {
+        "clean": 13.624999582767487,
+        "remove": 5.1250001192092896,
+        "keep": 13.812500059604645,
+        "hubs": 3.750000238418579,
+        "random-0": 13.624999821186066
+      }
+    },
+    {
+      "stem": "The family treated the old necklace as",
+      "group": "silent_h",
+      "words": [
+        "heirloom",
+        "keepsake"
+      ],
+      "effects": {
+        "clean": 9.438737154006958,
+        "remove": 4.375476360321045,
+        "keep": 9.962522506713867,
+        "hubs": 3.438842296600342,
+        "random-0": 9.438511431217194
+      }
+    },
+    {
+      "stem": "Grandmother gave the child",
+      "group": "silent_h",
+      "words": [
+        "heirloom",
+        "keepsake"
+      ],
+      "effects": {
+        "clean": 11.102108001708984,
+        "remove": 4.00156307220459,
+        "keep": 9.505737781524658,
+        "hubs": 2.0482521057128906,
+        "random-0": 11.0556321144104
+      }
+    },
+    {
+      "stem": "The grant application came from",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "organization",
+        "university"
+      ],
+      "effects": {
+        "clean": 12.125000476837158,
+        "remove": 5.6875,
+        "keep": 10.874999761581421,
+        "hubs": 2.5,
+        "random-0": 12.156250238418579
+      }
+    },
+    {
+      "stem": "The foundation agreed to sponsor",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "organization",
+        "university"
+      ],
+      "effects": {
+        "clean": 13.890625,
+        "remove": 6.687500476837158,
+        "keep": 11.46875,
+        "hubs": 2.9375,
+        "random-0": 13.890625
+      }
+    },
+    {
+      "stem": "The workers were represented by",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "institution",
+        "union"
+      ],
+      "effects": {
+        "clean": 11.726561546325684,
+        "remove": 5.6875,
+        "keep": 11.562500298023224,
+        "hubs": 1.8125004768371582,
+        "random-0": 11.85156261920929
+      }
+    },
+    {
+      "stem": "The committee contacted",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "institution",
+        "union"
+      ],
+      "effects": {
+        "clean": 12.078125,
+        "remove": 5.484375476837158,
+        "keep": 10.96875,
+        "hubs": 2.25,
+        "random-0": 12.125000476837158
+      }
+    },
+    {
+      "stem": "The new drawing program was tested by",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "artist",
+        "user"
+      ],
+      "effects": {
+        "clean": 15.593750476837158,
+        "remove": 7.28125,
+        "keep": 12.968750476837158,
+        "hubs": 3.031249523162842,
+        "random-0": 15.593749523162842
+      }
+    },
+    {
+      "stem": "The feedback came from",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "artist",
+        "user"
+      ],
+      "effects": {
+        "clean": 13.390625715255737,
+        "remove": 6.34375,
+        "keep": 13.101562976837158,
+        "hubs": 2.859375476837158,
+        "random-0": 13.359374761581421
+      }
+    },
+    {
+      "stem": "The band director said every member needed",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "instrument",
+        "uniform"
+      ],
+      "effects": {
+        "clean": 12.062499821186066,
+        "remove": 5.6875,
+        "keep": 10.406249761581421,
+        "hubs": 2.0,
+        "random-0": 12.000000208616257
+      }
+    },
+    {
+      "stem": "The band bought each new member",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "instrument",
+        "uniform"
+      ],
+      "effects": {
+        "clean": 11.906249761581421,
+        "remove": 5.343749523162842,
+        "keep": 10.406249761581421,
+        "hubs": 2.124999523162842,
+        "random-0": 11.906249761581421
+      }
+    },
+    {
+      "stem": "The team recruited",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "American",
+        "European"
+      ],
+      "effects": {
+        "clean": 10.906250476837158,
+        "remove": 5.53125,
+        "keep": 9.6875,
+        "hubs": 2.46875,
+        "random-0": 10.9375
+      }
+    },
+    {
+      "stem": "The painting was purchased by",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "American",
+        "European"
+      ],
+      "effects": {
+        "clean": 11.187500476837158,
+        "remove": 6.249999761581421,
+        "keep": 9.125000238418579,
+        "hubs": 2.3125,
+        "random-0": 11.25
+      }
+    },
+    {
+      "stem": "The item was formally designated as",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "asset",
+        "unit"
+      ],
+      "effects": {
+        "clean": 13.71875,
+        "remove": 7.406249523162842,
+        "keep": 11.078125,
+        "hubs": 3.25,
+        "random-0": 13.75
+      }
+    },
+    {
+      "stem": "The inventory records identified it as",
+      "group": "consonant_sound_vowel_letter",
+      "words": [
+        "asset",
+        "unit"
+      ],
+      "effects": {
+        "clean": 12.671874523162842,
+        "remove": 6.5,
+        "keep": 11.28125,
+        "hubs": 3.0,
+        "random-0": 12.625
+      }
+    },
+    {
+      "stem": "For dessert the child chose",
+      "group": "regular",
+      "words": [
+        "apple",
+        "pear"
+      ],
+      "effects": {
+        "clean": 12.906250238418579,
+        "remove": 5.1875,
+        "keep": 11.382812738418579,
+        "hubs": 2.15625,
+        "random-0": 12.90625
+      }
+    },
+    {
+      "stem": "Inside the lunchbox we found",
+      "group": "regular",
+      "words": [
+        "apple",
+        "pear"
+      ],
+      "effects": {
+        "clean": 12.093749761581421,
+        "remove": 4.21875,
+        "keep": 11.320312976837158,
+        "hubs": 1.828125,
+        "random-0": 12.093749523162842
+      }
+    },
+    {
+      "stem": "The machine was powered by",
+      "group": "regular",
+      "words": [
+        "engine",
+        "motor"
+      ],
+      "effects": {
+        "clean": 12.656249523162842,
+        "remove": 5.71875,
+        "keep": 10.687499761581421,
+        "hubs": 2.250000238418579,
+        "random-0": 12.656250238418579
+      }
+    },
+    {
+      "stem": "The mechanic installed",
+      "group": "regular",
+      "words": [
+        "engine",
+        "motor"
+      ],
+      "effects": {
+        "clean": 13.281249761581421,
+        "remove": 5.562500715255737,
+        "keep": 11.828125,
+        "hubs": 2.375000476837158,
+        "random-0": 13.218749761581421
+      }
+    },
+    {
+      "stem": "The gallery was interviewing",
+      "group": "regular",
+      "words": [
+        "artist",
+        "painter"
+      ],
+      "effects": {
+        "clean": 14.00000011920929,
+        "remove": 7.0625001192092896,
+        "keep": 11.468750298023224,
+        "hubs": 2.750000238418579,
+        "random-0": 14.125000774860382
+      }
+    },
+    {
+      "stem": "The portrait was completed by",
+      "group": "regular",
+      "words": [
+        "artist",
+        "painter"
+      ],
+      "effects": {
+        "clean": 14.374999165534973,
+        "remove": 7.40625,
+        "keep": 10.65625,
+        "hubs": 2.25,
+        "random-0": 14.343749165534973
+      }
+    },
+    {
+      "stem": "High in the branches we spotted",
+      "group": "regular",
+      "words": [
+        "owl",
+        "bird"
+      ],
+      "effects": {
+        "clean": 13.218749642372131,
+        "remove": 4.125,
+        "keep": 12.859375,
+        "hubs": 1.71875,
+        "random-0": 13.156249761581421
+      }
+    },
+    {
+      "stem": "The wildlife camera photographed",
+      "group": "regular",
+      "words": [
+        "owl",
+        "bird"
+      ],
+      "effects": {
+        "clean": 14.781250476837158,
+        "remove": 5.4375,
+        "keep": 13.507813453674316,
+        "hubs": 2.281249523162842,
+        "random-0": 14.750000476837158
+      }
+    },
+    {
+      "stem": "The travelers decided to visit",
+      "group": "regular",
+      "words": [
+        "island",
+        "peninsula"
+      ],
+      "effects": {
+        "clean": 12.82812488079071,
+        "remove": 5.312500476837158,
+        "keep": 11.46484375,
+        "hubs": 2.6875,
+        "random-0": 12.89062488079071
+      }
+    },
+    {
+      "stem": "The map showed",
+      "group": "regular",
+      "words": [
+        "island",
+        "peninsula"
+      ],
+      "effects": {
+        "clean": 12.53125,
+        "remove": 5.3125,
+        "keep": 11.75,
+        "hubs": 2.5625,
+        "random-0": 12.531250476837158
+      }
+    },
+    {
+      "stem": "The publishing house needed",
+      "group": "regular",
+      "words": [
+        "editor",
+        "writer"
+      ],
+      "effects": {
+        "clean": 13.812499523162842,
+        "remove": 5.687499523162842,
+        "keep": 12.953125,
+        "hubs": 2.625,
+        "random-0": 13.75
+      }
+    },
+    {
+      "stem": "The magazine hired",
+      "group": "regular",
+      "words": [
+        "editor",
+        "writer"
+      ],
+      "effects": {
+        "clean": 14.031250476837158,
+        "remove": 5.906249523162842,
+        "keep": 13.249999284744263,
+        "hubs": 2.749999523162842,
+        "random-0": 14.031250238418579
+      }
+    }
+  ]
+}

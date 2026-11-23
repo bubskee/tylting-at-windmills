@@ -1,0 +1,59 @@
+{
+  "model": {
+    "model_id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52
+  ],
+  "counts": {
+    "pooled": 1504,
+    "real0": 467,
+    "real1": 196,
+    "real2": 273,
+    "real3": 568,
+    "random0": 467,
+    "random1": 196,
+    "random2": 273,
+    "random3": 568
+  },
+  "calibration_seconds": 14.618547230027616,
+  "router_layer": 8,
+  "seed": 20261122,
+  "pooled_recovery": {
+    "real": 1.1404673581173434e-07,
+    "random": 1.1281492213901152e-07
+  },
+  "max_routing_reconstruction_error": 0.0029650453943759203
+}
